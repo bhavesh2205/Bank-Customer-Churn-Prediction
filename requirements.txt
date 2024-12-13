@@ -1,7 +1,12 @@
 tensorflow==2.15.0
 numpy
 pandas
+seaborn
+matplotlib
 scikit-learn
+xgboost
+catboost
+lightgbm
 tensorboard
 matplotlib
 streamlit

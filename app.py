@@ -6,16 +6,16 @@ import pandas as pd
 import pickle
 
 # Load the trained model
-model = tf.keras.models.load_model('model.h5')
+model = tf.keras.models.load_model('pickle/model_ann.h5')
 
 # Load the encoders and scaler
-with open('label_encoder.pkl', 'rb') as file:
+with open('pickle/label_encoder.pkl', 'rb') as file:
     label_encoder_gender = pickle.load(file)
 
-with open('onehot_encoder.pkl', 'rb') as file:
+with open('pickle/onehot_encoder.pkl', 'rb') as file:
     onehot_encoder_geo = pickle.load(file)
 
-with open('scaler.pkl', 'rb') as file:
+with open('pickle/scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
 # Streamlit app
@@ -84,10 +84,11 @@ if st.sidebar.button('Predict'):
     input_data = pd.concat([input_data.reset_index(drop=True), geography_encoded_df], axis=1)
 
     # Scale the input data
-    input_data_scaled = scaler.transform(input_data)
+    columns_to_standardize = ['CreditScore','Age','Tenure','Balance','EstimatedSalary']
+    input_data[columns_to_standardize] = scaler.transform(input_data[columns_to_standardize])
 
     # Predict churn
-    prediction = model.predict(input_data_scaled)
+    prediction = model.predict(input_data)
     prediction_proba = prediction[0][0]
 
     st.markdown("""<h4 style='text-align: center;'>Prediction Results</h4>""", unsafe_allow_html=True)
