@@ -8,15 +8,18 @@ The objective of this project is to develop a predictive model that can identify
 ### Data Description:
 The columns in the dataset are:
 
-1. CreditScore
-2. Age
-3. Tenure
-4. Balance
-5. NumOfProducts
-6. HasCrCard
-7. IsActiveMember
-8. EstimatedSalary
-9. Exited
-10. Geography
-11. Gender
+1. RowNumber
+2. CustomerID
+3. Surname
+4. CreditScore
+5. Age
+6. Tenure
+7. Balance
+8. NumOfProducts
+9. HasCrCard
+10. IsActiveMember
+11. EstimatedSalary
+12. Exited
+13. Geography
+14. Gender
 
