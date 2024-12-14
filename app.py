@@ -6,7 +6,9 @@ import pandas as pd
 import pickle
 
 # Load the trained model
-model = tf.keras.models.load_model('pickle/model_ann.h5')
+model = tf.keras.models.load_model('pickle/model_ANN.h5')
+#with open('pickle/random_forest.pkl', 'rb') as file:
+#    rf_model = pickle.load(file)
 
 # Load the encoders and scaler
 with open('pickle/label_encoder.pkl', 'rb') as file:
@@ -42,7 +44,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title('Customer Churn Prediction')
-st.markdown("""<h5 style='text-align: center; color: black;'>Predict whether a customer will churn based on their bank details</h5>""", unsafe_allow_html=True)
+st.markdown("""<h5 style='text-align: center; color: black;'>Predict whether a customer will churn based on their bank information</h5>""", unsafe_allow_html=True)
 
 # User input
 st.sidebar.header('Fill Below Details')
