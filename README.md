@@ -51,11 +51,12 @@ The dataset contains the following columns:
 ## Evaluation
 
   - Evaluated model performance using metrics like accuracy, precision, recall, F1-score, and ROC-AUC.
+  - Ramdom forest model found out to be the best performing model with recall score of 89%.
     
 ## Deployment
 
   - Save the trained model using pickle.
-  - Deployed via a web interface Streamlit.
+  - Deployed web app via streamlit open source community cloud.
 
 
 
