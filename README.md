@@ -46,12 +46,11 @@ The dataset contains the following columns:
   - Split data into training and testing sets (80-20 split).
   - Since the data was imbalanced so handled this issue using SMOTE (Synthetic Minority Over-sampling Technique) in order to make fair predictions.
   - Created a function for training different models in one go like Logistic Regression, Random Forest, SVC, Decision Tree, XGBoost, CatBoost etc.
-  - Also trained ANN model using tensorflow framework.
 
 ## Evaluation
 
   - Evaluated model performance using metrics like accuracy, precision, recall, F1-score, and ROC-AUC.
-  - Random forest model found out to be the best performing model with recall score of 89%.
+  - Random forest model found out to be the best performing model with recall score of 86%.
     
 ## Deployment
 
