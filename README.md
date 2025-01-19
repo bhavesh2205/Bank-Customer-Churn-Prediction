@@ -55,7 +55,7 @@ The dataset contains the following columns:
 ## Deployment
 
   - Save the trained model using pickle.
-  - Deployed web app via streamlit open source community cloud.
+  - Hosted the web app using Render cloud platform.
 
 
 
