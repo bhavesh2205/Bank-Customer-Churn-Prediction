@@ -9,3 +9,6 @@ lightgbm
 matplotlib
 streamlit
 imbalanced-learn
+fastapi
+uvicorn
+pydantic
